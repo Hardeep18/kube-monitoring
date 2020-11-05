@@ -1,2 +1,2 @@
 # kube-monitoring
-Monitoring Setup for kubernetes
+Prometheus, Grafana and Alert manager

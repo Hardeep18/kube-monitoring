@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-conf
+  labels:
+    name: alertmanager-conf
+  namespace: monitoring
+data:
+  alertmanager.yml: |
+    global:
+      smtp_smarthost: 'ovpc1-dwf02.humanify.org:25'
+      smtp_from: 'hardeep.singh@agiliztech.com'
+      smtp_require_tls: false
+    route:
+      receiver: slack_receiver
+    receivers:
+    - name: slack_receiver
+      slack_configs:
+      - send_resolved: true
+        username: 'Hardeep'
+        api_url: 'https://hooks.slack.com/services/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'
+        channel: '#kube-alert'
