@@ -43,4 +43,4 @@ spec:
           name: config-volume
         - name: storage-volume
           persistentVolumeClaim:
-            claimName: alertmanager-pvc
+            claimName: alert-pvc
